@@ -1,7 +1,10 @@
 #lang racket
 
 (define (fast-expt b n)
-  (fast-expt-iter b (- n 1) b)
+  (if (>= n 0)
+    (fast-expt-iter b (- n 1) b)
+    (/ 1 (fast-expt-iter b (- (- n) 1) b))
+  )
 )
 
 (define (fast-expt-iter b counter product)
@@ -27,7 +30,7 @@
       (printf "Can you handle another? ")
       (read-loop (read))
     )
-    "That's it, now go away!"
+    "Then go away!"
   )
 )
 
