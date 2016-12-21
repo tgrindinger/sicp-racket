@@ -24,7 +24,7 @@
       (let ([b (read)])
         (printf "Now give me an exponent! ")
         (let ([n (read)])
-          (printf "Raising ~a to the power of ~a with gives ~a!\n" b n (fast-expt b n))
+          (printf "Raising ~a to the power of ~a gives ~a!\n" b n (fast-expt b n))
         )
       )
       (printf "Can you handle another? ")
